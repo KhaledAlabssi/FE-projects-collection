@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vh;
+
+   
+}
+
+.container.vertical {
+    flex-direction: column;
+    height: 80vh;
+}
+
+.photo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: ivory;
+    flex: 0.5; /*will be change whenver we set photo to active*/
+    margin: 1px;
+    position: relative;
+    transition: flex 0.7s ease;
+    cursor: pointer;
+
+
+}
+
+
+.photo p {
+    
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  opacity: 0;
+}
+
+.photo.active p{
+    opacity: 1;
+    
+}
+
+.photo.active {
+    flex: 11;
+}
+
+@media (max-width: 480px) {
+    .photo:nth-of-type(5), .photo:nth-of-type(6) {
+        display: none;
+    }
+    
+}
